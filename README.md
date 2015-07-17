@@ -22,7 +22,7 @@ i18n.init({
             foo: {
                 bar: "Fubar"
             },
-            name: "Hello, \__name\__!"
+            name: "Hello, __name__!"
         }
     }
 });
