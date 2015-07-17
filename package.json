@@ -1,0 +1,28 @@
+{
+  "name": "translatorjs",
+  "version": "1.0.0",
+  "description": "Micro implementation of a translation system",
+  "main": "translatorJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/translatorjs/translatorjs.git"
+  },
+  "keywords": [
+    "i18n",
+    "internationalisation",
+    "l10n",
+    "localisation",
+    "translation",
+    "translator",
+    "javascript"
+  ],
+  "author": "Jean-Christophe Cuvelier <cybertotophe@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/translatorjs/translatorjs/issues"
+  },
+  "homepage": "https://github.com/translatorjs/translatorjs#readme"
+}
