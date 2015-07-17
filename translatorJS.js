@@ -27,7 +27,10 @@ var i18n = function () {
 		if (typeof options.language != "undefined") {
 			i18n.language = options.language;
 		} else {
-			detectLanguage();
+			var language = detectLanguage();
+			if (language) {
+				i18n.language = language;
+			}
 		}
 
 		if (typeof options.translations != "undefined") {
@@ -36,7 +39,30 @@ var i18n = function () {
 	};
 
 	var detectLanguage = function () {
-		// TODO: Detect browser language
+		var nav = window.navigator,
+			browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+			i,
+			language;
+
+		// support for HTML 5.1 "navigator.languages"
+		if (Array.isArray(nav.languages)) {
+			for (i = 0; i < nav.languages.length; i++) {
+				language = nav.languages[i];
+				if (language && language.length) {
+					return language;
+				}
+			}
+		}
+
+		// support for other well known properties in browsers
+		for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+			language = nav[browserLanguagePropertyKeys[i]];
+			if (language && language.length) {
+				return language;
+			}
+		}
+
+		return undefined;
 	};
 
 	var getLexicon = function () {

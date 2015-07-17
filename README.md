@@ -31,3 +31,7 @@ i18n.t('hello'); // return "Hello, World!"
 i18n.t('foo.bar'); // return "Fubar"
 i18n.t('name', {name: "Dave"}); // return "Hello, Dave!"
 ```
+
+## Support
+
+With the support of [ARTACK WebLab GmbH](http://www.artack.ch)
