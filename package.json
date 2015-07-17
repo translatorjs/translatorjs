@@ -1,6 +1,6 @@
 {
   "name": "translatorjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Micro implementation of a translation system",
   "main": "translatorJS.js",
   "scripts": {
@@ -25,6 +25,5 @@
     "url": "https://github.com/translatorjs/translatorjs/issues"
   },
   "homepage": "https://github.com/translatorjs/translatorjs#readme",
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
