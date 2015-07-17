@@ -26,7 +26,7 @@ var i18n = function () {
 
 		if (typeof options.language != "undefined") {
 			i18n.language = options.language;
-		} else {
+		} else if (typeof window != "undefined") {
 			var language = detectLanguage();
 			if (language) {
 				i18n.language = language;

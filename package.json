@@ -4,7 +4,7 @@
   "description": "Micro implementation of a translation system",
   "main": "translatorJS.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/jasmine/bin/jasmine.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,7 @@
   "bugs": {
     "url": "https://github.com/translatorjs/translatorjs/issues"
   },
-  "homepage": "https://github.com/translatorjs/translatorjs#readme"
+  "homepage": "https://github.com/translatorjs/translatorjs#readme",
+  "devDependencies": {
+  }
 }
