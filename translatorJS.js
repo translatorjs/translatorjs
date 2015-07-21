@@ -34,7 +34,38 @@ var i18n = function () {
 		}
 
 		if (typeof options.translations != "undefined") {
+			merge(i18n.translations, options.translations);
+		}
+	};
+
+	var reset = function (options) {
+		options = options || {};
+
+		if (typeof options.language != "undefined") {
+			i18n.language = options.language;
+		} else if (typeof window != "undefined") {
+			var language = detectLanguage();
+			if (language) {
+				i18n.language = language;
+			}
+		}
+
+		if (typeof options.translations != "undefined") {
 			i18n.translations = options.translations;
+		}
+	};
+
+	var merge = function (destination, source) {
+		if (typeof source == "object") {
+			for (var property in source) {
+				if (typeof destination[property] == "undefined") {
+					destination[property] = source[property];
+				} else if (typeof source[property] == "object") {
+					merge(destination[property], source[property]);
+				} else {
+					destination[property] = source[property];
+				}
+			}
 		}
 	};
 
@@ -126,7 +157,8 @@ var i18n = function () {
 
 	return {
 		init: init,
-		t: translate
+		t: translate,
+		reset: reset
 	}
 };
 
