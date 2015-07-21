@@ -1,6 +1,6 @@
 {
   "name": "translatorjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Micro implementation of a translation system",
   "main": "translatorJS.js",
   "scripts": {
